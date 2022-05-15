@@ -143,7 +143,7 @@ if (!$.isNumeric(tmpAccNo))
 return "Insert a numerical value for Account Number.";
 }
 // convert to integer
-$("#Account_number").val(parseFloat(tmpAccNo));
+$("#Account_number").val(parseInt(tmpAccNo));
 
 
 
