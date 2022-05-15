@@ -70,27 +70,6 @@ $("#hidAccIDSave").val("");
 $("#formItem")[0].reset(); 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // UPDATE==========================================
 $(document).on("click", ".btnUpdate", function(event)
 {
@@ -147,16 +126,6 @@ if (status == "success")
  } 
 }
 
-
-
-
-
-
-
-
-
-
-
 // CLIENT-MODEL================================================================
 function validateItemForm()
 {
@@ -165,6 +134,19 @@ if ($("#Account_number").val().trim() == "")
 {
 return "Insert Account Number.";
 }
+
+
+// is numerical value
+var tmpAccNo = $("#Account_number").val().trim();
+if (!$.isNumeric(tmpAccNo))
+{
+return "Insert a numerical value for Account Number.";
+}
+// convert to integer
+$("#Account_number").val(parseFloat(tmpAccNo));
+
+
+
 // NAME
 if ($("#Account_name").val().trim() == "")
 {
@@ -177,16 +159,7 @@ if ($("#Premises_id").val().trim() == "")
 return "Insert Premises ID.";
 }
 
-/**
-// is numerical value
-var tmpPrice = $("#itemPrice").val().trim();
-if (!$.isNumeric(tmpPrice))
-{
-return "Insert a numerical value for Item Price.";
-}
-// convert to decimal price
-$("#itemPrice").val(parseFloat(tmpPrice).toFixed(2));
-*/
+
 
 // Cus id
 if ($("#Cus_id").val().trim() == "")

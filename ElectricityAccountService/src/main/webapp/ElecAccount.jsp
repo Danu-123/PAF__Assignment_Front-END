@@ -21,7 +21,7 @@
 <div class="container">
 			<div class="row">
 				<div class="col">
-					<h1>Electricity Account Management</h1>
+					<h1><center>Electricity Account</center></h1>
 					<form id="formItem" name="formItem" method="POST" action="ElecAccount.jsp">
 						Account Number: 
 						<input 
